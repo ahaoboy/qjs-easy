@@ -26,10 +26,10 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10
-      - name: vitest
+      - name: build
         run: |
           pnpm install
           pnpm run build
       - name: test
         run: |
-          ./cli/cli.js https://github.com/denoland/deno --help
+          ./cli/cli.js --help
