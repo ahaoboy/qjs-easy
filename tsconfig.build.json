@@ -20,7 +20,7 @@
     "noEmitOnError": false,
     "declarationMap": false,
     "sourceMap": false,
-    "declaration": true,
+    "declaration": true
   },
   "include": ["src"]
 }
