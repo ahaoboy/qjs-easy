@@ -21,7 +21,7 @@
   "author": "ahaoboy",
   "license": "ISC",
   "scripts": {
-    "postinstall": "echo 111 && node ./bundle/setup.js",
+    "postinstall": "node ./cli/setup.js",
     "dev": "tsc -w -p tsconfig.build.json",
     "pre-check": "npm run clippy && npm run format",
     "clippy": "cargo clippy --fix --allow-dirty --allow-staged",
