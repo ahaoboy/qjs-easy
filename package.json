@@ -1,0 +1,46 @@
+{
+  "name": "@qjs-easy/qjs-easy",
+  "version": "0.1.0",
+  "description": "qjs-easy",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "bin": {
+    "qjs": "bundle/index.js"
+  },
+  "files": [
+    "dist",
+    "bundle",
+    "readme.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahaoboy/qjs-easy.git"
+  },
+  "homepage": "https://github.com/ahaoboy/qjs-easy#readme",
+  "keywords": [
+    "qjs-easy"
+  ],
+  "author": "ahaoboy",
+  "license": "ISC",
+  "scripts": {
+    "postinstall": "echo 111 && node ./bundle/setup.js",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "pre-check": "npm run clippy && npm run format",
+    "clippy": "cargo clippy --fix --allow-dirty --allow-staged",
+    "format": "deno fmt --ignore=node_modules,dist,bundle,target --indent-width=2 --no-semicolons --single-quote",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "build": "esbuild --outdir=bundle --bundle --minify --platform=node --format=cjs src/*.ts",
+    "clear": "rm -rf node_modules dist bundle",
+    "bump": "pnpm up --latest --force",
+    "release": "pnpm publish -r --access public",
+    "release-alpha": "pnpm publish -r --access public --tag alpha",
+    "start": "npm run build && node dist/index.js"
+  },
+  "devDependencies": {
+    "@easy-install/easy-install": "^1.2.4",
+    "@types/node": "^22.10.7",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.3"
+  }
+}
