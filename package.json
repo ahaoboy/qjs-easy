@@ -1,5 +1,5 @@
 {
-  "name": "@qjs-easy/qjs-easy",
+  "name": "@easy-install/qjs-easy",
   "version": "0.1.0",
   "description": "qjs-easy",
   "types": "dist/index.d.ts",
