@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-if (require('fs').existsSync('../bundle/setup.js')) {
-  require('../bundle/setup.js')
+const p = require('path').join(__dirname, '..', 'bundle', 'setup.js')
+if (require('fs').existsSync(p)) {
+  require(p)
 }
