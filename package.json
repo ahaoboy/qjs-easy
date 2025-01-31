@@ -1,14 +1,12 @@
 {
   "name": "@easy-install/qjs-easy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "qjs-easy",
-  "types": "dist/index.d.ts",
-  "main": "dist/index.js",
   "bin": {
-    "qjs": "bundle/index.js"
+    "qjs": "cli/cli.js"
   },
   "files": [
-    "dist",
+    "cli",
     "bundle",
     "readme.md"
   ],
