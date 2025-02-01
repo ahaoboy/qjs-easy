@@ -3,7 +3,8 @@
   "version": "0.1.1",
   "description": "qjs-easy",
   "bin": {
-    "qjs": "cli/cli.js"
+    "qjs": "cli/cli.js",
+    "qjsc": "cli/cli.js"
   },
   "files": [
     "cli",
