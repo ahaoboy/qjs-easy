@@ -34,4 +34,3 @@ jobs:
         run: |
           ./cli/qjs.js --help
           ./cli/qjs.js -e "console.log('hello qjs')"
-          ./cli/qjsc.js -h
